@@ -1,0 +1,249 @@
+* {
+    font-family: 'Varela Round', sans-serif;
+}
+
+.img-grid {
+    height: 100vh;
+}
+
+.product-container {
+    grid-gap: 20px;
+    height: 100%;
+}
+
+.recommended-items-algo {
+    margin: 55px 0 50px 182px;
+    overflow: auto;
+}
+
+.item-container-algo {
+    height: 100px;
+    width: 500px;
+    display: grid;
+    grid-template-columns: 10fr 3fr;
+    border: solid 1px black;
+    margin: 3px 15px 3px 3px;
+    float: right;
+    border-radius: 10px;
+}
+.item-img {
+    background: cadetblue;
+    width: 100px;
+    height: 101px;
+    position: relative;
+    right: -17px;
+    border-radius: 10px;
+    top: -1px;
+}
+
+.item-description {
+    height: 100%;
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    grid-gap: 2px;
+    padding: 5px;
+}
+.upload-info {
+    display: flex;
+}
+
+.upload-desc {
+    direction: rtl;
+    padding-right: 5px;
+    font-size: 10px;
+}
+
+.img-wrap {
+    height: 100px;
+    width: 100px;
+    display: flex;
+}
+
+.wrap {
+    height: 200px;
+    float: left;
+    margin-bottom: 120px;
+    margin-left: 15px;
+}
+
+.img {
+    background-color: #6d76f7;
+    height: 145px;
+    width: 265px;
+    position: relative;
+    top: 10px;
+    left: 10px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.container {
+    background-color: #F4F4F4;
+    height: 290px;
+    width: 285px;
+    margin: 0 auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+
+.distance {
+    grid-area: distance;
+    background-color: #E29B18;
+    color: white;
+    width: 50px;
+    height: 18px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 12px;
+    padding-top: 2px;
+}
+
+.upload-time {
+    grid-area: upload-time;
+    height: 20px;
+    width: 40px;
+    margin-left: 10px;
+    font-size: 12px;
+    padding-top: 2px;
+}
+
+.contact-seller {
+    grid-area: contact-seller;
+    height: 22px;
+    width: 85px;
+    background-color: #6B7A8F;
+    margin: 0 0 4px 4px;
+    color: white;
+    border-radius: 7px;
+    border: none;
+    text-align: center;
+    box-shadow: 0px 2px 3px rgba(0,0,0,0.3);
+    text-decoration: none;
+}
+
+.contact {
+    grid-area: contact-seller;
+    background-color: #6B7A8F;
+    margin: 0 0 4px 4px;
+    height: 37px;
+    width: 85px;
+    border: none;
+    border-radius: 7px;
+    color: white;
+    text-align: center;
+    box-shadow: 0px 2px 3px rgba(0,0,0,0.3);
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.button-line {
+    display: grid;
+    grid-template-areas: 'upload-time distance category' 'description description description' 'contact-seller contact-seller address';
+    position: absolute;
+    bottom: 5px;
+    overflow: hidden;
+    grid-gap: 10px;
+    padding-right: 5px;
+    max-height: 125px;
+}
+
+.description {
+    grid-area: description;
+    height: 40px;
+    font-size: 12px;
+    direction: rtl;
+    padding: 5px;
+}
+
+.dist-title {
+    background-color: #F4F4F4;
+    height: 40px;
+    text-align: right;
+    position: fixed;
+    width: 220px;
+    padding-top: 10px;
+    margin-left: 10px;
+}
+
+.distance-filtered-items {
+    margin-top: 47px;
+}
+
+.category {
+    position: absolute;
+    right: 10px;
+}
+
+.address {
+    grid-area: address;
+    width: 160px;
+    text-align: right;
+    font-size: 12px;
+}
+
+.sort-by-container {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    direction: rtl;
+    background-color: #647882;
+    border-radius: 13px;
+    box-shadow: 0px 2px 3px rgba(0,0,0,0.3);
+    width: 888px;
+    height: 30px;
+    text-align: center;
+    padding-top: 5px;
+    color: white;
+
+}
+
+.sort-selection {
+    margin-right: 10px;
+    width: 130px;
+    border: none;
+    border-radius: 7px;
+    height: 25px;
+}
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.1);
+    backdrop-filter: blur(1px);
+    z-index: 2;
+}
+
+.backdrop img {
+    display: block;
+    max-width: 60%;
+    max-height: 80%;
+    margin: 60px auto;
+    box-shadow: 3px 5px 7px rgba(0,0,0,0.1);
+    border: 1px solid white;
+
+}
+
+.wanted-product {
+    font-size: 15px;
+    background: #E03138;
+    color: white;
+    width: 100px;
+    height: 20px;
+    text-align: center;
+    border-radius: 5px;
+    position: relative;
+    bottom: 140px;
+    z-index: 1;
+    left: 10px;
+}
+
+.loading {
+    position: relative;
+    left: 48%;
+    top: 10%;
+}

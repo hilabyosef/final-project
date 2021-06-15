@@ -1,0 +1,240 @@
+
+body {
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.landing-first-container {
+    width: 100%;
+    height: 415px;
+    background-color: #F0F0F0;
+    display: grid;
+    grid-template-columns: 5fr 5fr;
+    grid-template-areas: 'text image';
+    overflow-y: auto;
+}
+
+.laptop-img{
+    grid-area: image;
+}
+
+.landing-header-text {
+    grid-area: text;
+    width: 415px;
+    height: 250px;
+    position: relative;
+    top: 40px;
+    left: 30vh;
+    direction: rtl;
+    text-align: center;
+}
+
+.landing-header-text h4 {
+    text-align: center;
+    width: 265px;
+    margin-right: 82px;
+}
+
+.landing-second-container {
+    width: 100%;
+    height: 240px;
+    background-color: #AAC8EB;
+    display: grid;
+    grid-template-columns: 3fr 2fr 3fr;
+    grid-template-areas: 'image image image';
+    padding-top: 20px;
+}
+
+.landing-second-container h2 {
+    color: white;
+    font-size: 20px;
+}
+
+
+
+.landing-buttons {
+    z-index: 3;
+    position: relative;
+    top: 250px;
+    right: 177px;
+
+}
+
+.landing-buttons-hide {
+    display: none;
+}
+
+.landing-sign-in {
+    width: 120px;
+    height: 40px;
+    background-color: #FA7363;
+    border: none;
+    border-radius: 10px;
+    margin-right: 50px;
+}
+
+.landing-sign-in a, .landing-sign-up a{
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.landing-sign-up {
+    width: 120px;
+    height: 40px;
+    background-color: #FA7363;
+    border: none;
+    border-radius: 10px;
+    margin-right: 90px;
+}
+
+.landing-second-img {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    border: 1px solid #FFFFFF;
+    box-sizing: border-box;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.landing-third-container {
+    height: 300px;
+    width: 100%;
+    background-color: white;
+}
+
+.landing-div-search {
+    text-align: center;
+    margin-left: 160px;
+}
+
+.landing-div-donate{
+    text-align: center;
+}
+
+.landing-div-recycle {
+    text-align: center;
+    margin-right: 160px;
+}
+
+.landing-div-map {
+    display: grid;
+    grid-template-columns: 5fr 5fr;
+    grid-template-areas: 'map-image map-text';
+}
+
+.landing-map-img {
+    grid-area: map-image;
+    width: 300px;
+    margin: 50px 0 0 250px;
+}
+
+.map-text {
+    grid-area: map-text;
+    text-align: center;
+    width: 360px;
+    margin-top: 85px;
+    margin-left: 65px;
+}
+
+.landing-fourth-container {
+    height: 300px;
+    width: 100%;
+    background-color: white;
+    padding-top: 25px;
+}
+
+.landing-div-smart {
+    display: grid;
+    grid-template-columns: 5fr 4fr;
+    grid-template-areas: 'smart-text smart-image';
+}
+
+.landing-smart-img {
+    grid-area: smart-image;
+    width: 250px;
+    margin-left: 65px;
+}
+
+.smart-text {
+    grid-area: smart-text;
+    text-align: center;
+    width: 360px;
+    position: relative;
+    float: right;
+    margin-left: 285px;
+}
+
+.main-page {
+    width: 75%;
+    height: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    background: white;
+    box-shadow: 1px 2px 5px rgba(0,0,0,0.3);
+    overflow: auto;
+
+}
+
+.first-container {
+    background: #F0F0F0;
+    height: 180px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 100px;
+    text-align: center;
+}
+
+.text-one {
+    position: relative;
+    left: 85%;
+    width: 115px;
+    color: #9dbb4f;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.text-two {
+    position: relative;
+    left: 38%;
+    width: 115px;
+    color: #9dbb4f;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.text-three {
+    position: relative;
+    right: 12%;
+    width: 115px;
+    color: #9dbb4f;
+    font-size: 25px;
+    font-weight: bold;
+
+}
+
+.landing-image-div {
+    height: 240px;
+    right: 33px;
+    margin-right: 20px;
+    position: relative;
+    top: -60px;
+}
+.first-text {
+    position: relative;
+    top: 45%;
+    left: 45%;
+
+}
+
+.first-text h1 {
+    font-size: 40px;
+}
+
+.middle-text-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}

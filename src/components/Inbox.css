@@ -1,0 +1,22 @@
+
+.messagesContainer {
+    position: absolute;
+    height: 687px;
+    width: 1550px;
+    background: #cccccc;
+    left: 5%;
+    transform: translate(4%, 6%);
+}
+
+.expandMessagesBtn {
+    position: absolute;
+    right: 0.7%;
+    border: none;
+    width: 7%;
+    top: 1%;
+    height: 6%;
+}
+.expandMessagesBtn:hover {
+    background-color: #79D493;
+}
+

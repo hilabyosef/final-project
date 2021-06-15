@@ -1,0 +1,189 @@
+.logInContainer {
+    width: 700px;
+    height: 380px;
+    background: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    box-shadow: 0px 2px 3px rgba(0,0,0,0.3);
+    display: grid;
+    grid-template-columns: 5fr 7fr;
+    grid-template-areas: 'image text';
+}
+
+.logInImage {
+    grid-area: image;
+}
+
+.logInText {
+    grid-area: text;
+}
+
+
+.forgotPasswordContainer {
+    width: 100%;
+    height: 100%;
+    background: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+
+}
+
+.logInForm {
+    position: absolute;
+    top: 57%;
+    left: 59%;
+    transform: translate(-50%, -50%);
+}
+
+.logInInputs {
+    display: grid;
+    direction: rtl;
+    width: 210px;
+    margin-left: 41%;
+}
+
+.logInInputs input {
+    border-width: 0 0 1px 0;
+    float: right;
+    /*direction: rtl;*/
+    margin-bottom: 25px;
+
+}
+
+.logInBtn {
+    display: block;
+    background-color: rgb(121, 212, 147);
+    width: 145px;
+    height: 25px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 19px;
+    color: white;
+    border: none;
+    letter-spacing: 1px;
+    box-shadow: 0px 2px 3px rgba(0,0,0,0.3);
+    position: absolute;
+    top: 125%;
+    left: 16%;
+}
+
+
+.logInBtn:hover {
+    box-shadow: inset 0 2px 3px rgba(255,255,255,1);
+}
+
+.forgotPasswordBtn {
+    position: absolute;
+    top: 66%;
+    left: 75%;
+    background: none;
+    border: none;
+}
+
+.forgotPasswordBtn:hover {
+    color: darkseagreen;
+}
+
+.newUser {
+    position: absolute;
+    top: 33%;
+    left: 63.5%;
+    font-size: 14px;
+}
+
+.forgotPasswordForm {
+    position: absolute;
+    top: 43%;
+    left: 19%;
+}
+
+.forgotPasswordEmailInput {
+    border-width: 0 0 1px 0;
+    float: right;
+    display: grid;
+    direction: rtl;
+}
+
+.forgotPasswordH2 {
+    position: absolute;
+    top: 18%;
+    left: 25%;
+}
+
+.forgotPasswordSubmit {
+    background-color: rgb(121, 212, 147);
+    width: 145px;
+    height: 35px;
+    padding: 10px;
+    border-radius: 19px;
+    color: white;
+    border: none;
+    letter-spacing: 1px;
+    box-shadow: 0px 2px 3px rgba(0,0,0,0.3);
+    position: absolute;
+    top: 211%;
+    left: -5%;
+
+}
+
+.forgotPasswordSubmit:hover {
+    background: #6bd489;
+}
+
+.passwordReset {
+    position: absolute;
+    top: 62%;
+    left: 27%;
+
+}
+
+.reLogIn {
+    background-color: rgb(121, 212, 147);
+    width: 145px;
+    height: 35px;
+    padding: 10px;
+    border-radius: 19px;
+    color: white;
+    border: none;
+    letter-spacing: 1px;
+    box-shadow: 0px 2px 3px rgba(0,0,0,0.3);
+    position: absolute;
+    top: 211%;
+    left: -63%;
+}
+
+.reLogIn:hover {
+    background: #6bd489;
+
+}
+
+.forgotPasswordH5 {
+    margin-top: -15%;
+    margin-left: -57%;
+}
+.logInImageDiv {
+    width: 40%;
+    height: 75%;
+    margin-top: 8%;
+    position: absolute;
+}
+.logInH2 {
+    position: absolute;
+    top: 8%;
+    left: 58%;
+    color: #79D493;
+}
+
+.forgotPasswordImageDiv {
+    position: absolute;
+    width: 47%;
+    right: 0;
+    margin-top: 5%;
+
+}

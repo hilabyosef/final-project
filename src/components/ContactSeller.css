@@ -1,0 +1,28 @@
+/*.contact-seller-div {*/
+/*    position: absolute;*/
+/*    height: 400px;*/
+/*    width: 800px;*/
+/*    background: white;*/
+/*    border-radius: 10px;*/
+/*    top: 50%;*/
+/*    left: 50%;*/
+/*    transform: translate(-50%, -50%);*/
+/*    padding: 10px 10px 30px 10px;*/
+/*}*/
+
+/*.contact-seller-messages {*/
+/*    height: 636px;*/
+/*    max-height: 636px;*/
+/*    overflow: auto;*/
+/*}*/
+
+.contact-seller-div {
+    position: absolute;
+    height: 400px;
+    background: white;
+    border-radius: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 10px 30px 10px;
+}

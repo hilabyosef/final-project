@@ -1,0 +1,35 @@
+.messageContent {
+    max-width: 500px;
+    margin: 0 10px 12px 10px;
+    line-height: 24px;
+    padding: 5px 20px;
+    border-radius: 25px;
+    position: relative;
+    color: black;
+    text-align: center;
+}
+
+.message {
+    display: flex;
+    align-items: center;
+    margin-left: 1%;
+}
+
+
+.sent {
+    flex-direction: row-reverse;
+    margin-right: 1%;
+}
+
+.sent p {
+    color: black;
+    background: rgb(140 218 163);
+    align-self: flex-end;
+    flex-direction: row-reverse;
+
+}
+.received p {
+    background: #b2bedf;
+    color: black;
+
+}
