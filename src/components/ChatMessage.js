@@ -1,5 +1,5 @@
 import React from 'react';
-import { fire } from "../firebase";
+import { fire, projectFirestore } from "../firebase";
 import "./ChatMessage.css"
 
 const ChatMessage = (props) => {

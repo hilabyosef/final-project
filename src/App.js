@@ -1,16 +1,17 @@
 import { fire, projectFirestore } from "./firebase";
-import { BrowserRouter as Router, Switch, Route, NavLink } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, NavLink, Link } from "react-router-dom";
 import React, { useState } from "react";
-import './App.css';
 import SignUp from "./components/SignUp";
 import LogIn from "./components/LogIn";
 import Inbox from "./components/Inbox";
 import ImageGrid from "./components/image-grid";
+import './App.css';
 import ContactSeller from "./components/ContactSeller";
 import UploadProductForm from "./components/upload-form";
 import LandingPage from "./components/LandingPage";
 import Home from "./components/Home";
 import UpdateInfo from "./components/UpdateInfo";
+import UseSearch from "./components/handleSearch";
 
 function App() {
 
@@ -23,11 +24,8 @@ function App() {
   };
 
   const getNickname = async() => {
-    let nickname;
-    await projectFirestore.collection('testCreateUser').
-    doc(currentUser).get().then(doc => nickname = doc.data().nickname);
-    setUserNickname(nickname);
-
+    await projectFirestore.collection('testCreateUser').doc(currentUser).get()
+        .then(doc => setUserNickname(doc.data().nickname));
   }
 
   fire.auth().onAuthStateChanged((authUser) => {
@@ -36,6 +34,7 @@ function App() {
       if(currentUser) {
         getNickname();
       }
+
     } else {
       setCurrentUser('');
       setUserNickname('');
@@ -46,35 +45,36 @@ function App() {
     fire.auth().signOut();
   }
 
-
   return (
       <Router>
         <div className="main-navbar">
           <nav className="nav-bar">
             <ul className={currentUser ? 'nav-menu' : 'nav-menu-off'} onClick={handleClick}>
-              <li>
-                <NavLink to="/Home" activeClassName="active" exact={true}>דף הבית</NavLink>
-              </li>
-              <li>
-                <NavLink to="/Search" activeClassName="active" exact={true}>מוצרים</NavLink>
-              </li>
-              <li>
-                <NavLink to="/Upload" activeClassName="active">העלאת מוצר לאתר</NavLink>
-              </li>
-              <li>
-                <NavLink to="/Inbox" activeClassName="active">תיבת הודעות</NavLink>
-              </li>
-              <li className={currentUser ? "sign-off" : "sign-on"}>
+              <li className={currentUser ? "sign-off hvr" : "sign-on hvr"}>
                 <NavLink to="/SignUp" activeClassName="active">הרשמה לאתר</NavLink>
               </li>
-              <li className={currentUser ? "sign-off" : "sign-on"}>
+              <li className={currentUser ? "sign-off hvr" : "sign-on hvr"}>
                 <NavLink to="/LogIn" activeClassName="active">התחברות לאתר</NavLink>
               </li>
-              <li>
-                {currentUser &&  <NavLink to="/UserSettings">`שלום {userNickname}`</NavLink> }
+              <li className="hvr">
+                <NavLink to="/Inbox" activeClassName="active">תיבת הודעות</NavLink>
               </li>
-              <li>
-                <button className={currentUser ? 'logout-button' : 'hide-logout'} onClick={handleLogOut}>LogOut</button>
+              <li className="hvr">
+                <NavLink to="/Upload" activeClassName="active">העלאת מוצר לאתר</NavLink>
+              </li>
+              <li className="hvr">
+                <NavLink to="/Search" activeClassName="active" exact={true}>מוצרים</NavLink>
+              </li>
+              <li className="hvr">
+                <NavLink to="/Home" activeClassName="active" exact={true}>דף הבית</NavLink>
+              </li>
+              <li className="hello-user hvr">
+                {currentUser &&  <NavLink to="/UserSettings"> שלום {userNickname} </NavLink> }
+              </li>
+              <li className="logout-btn">
+                <Link className={currentUser ? 'logout-button' : 'hide-logout'} onClick={handleLogOut} to={{
+                  pathname: "/Home"
+                }}>LogOut</Link>
               </li>
             </ul>
           </nav>

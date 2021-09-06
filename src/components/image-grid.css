@@ -12,7 +12,7 @@
 }
 
 .recommended-items-algo {
-    margin: 55px 0 50px 182px;
+    margin: 55px 168px 50px 139px;
     overflow: auto;
 }
 
@@ -61,7 +61,7 @@
 
 .wrap {
     height: 200px;
-    float: left;
+    float: right;
     margin-bottom: 120px;
     margin-left: 15px;
 }
@@ -75,6 +75,10 @@
     left: 10px;
     border-radius: 5px;
     object-fit: cover;
+}
+
+.img:hover {
+    cursor: pointer;
 }
 
 .container {
@@ -120,21 +124,6 @@
     border: none;
     text-align: center;
     box-shadow: 0px 2px 3px rgba(0,0,0,0.3);
-    text-decoration: none;
-}
-
-.contact {
-    grid-area: contact-seller;
-    background-color: #6B7A8F;
-    margin: 0 0 4px 4px;
-    height: 37px;
-    width: 85px;
-    border: none;
-    border-radius: 7px;
-    color: white;
-    text-align: center;
-    box-shadow: 0px 2px 3px rgba(0,0,0,0.3);
-    font-size: 14px;
     text-decoration: none;
 }
 

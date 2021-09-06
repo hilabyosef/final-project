@@ -1,38 +1,81 @@
 .conversationsContainer {
     display: grid;
-    grid-template-columns: 8fr 1.5fr;
+    grid-template-columns: 6fr 1.5fr;
     grid-template-areas: 'text text';
+    height: 50vh;
 
 }
 
 .messagesList {
-    position: static;
-    width: 91%;
-    /*background: aliceblue;*/
-    height: 255%;
-    margin-top: 22%;
-    margin-left: 5%;
+    position: absolute;
+    top: 10px;
+    height: 375px;
+    max-height: 375px;
+    background: #99b7bc;
+    right: 10px;
+    width: 218px;
+    overflow: auto;
 }
 
 .fullChat {
-    background: #B1B1B1;
-    top: 24%;
-    margin-top: 4%;
-    margin-left: 1%;
-    height: 569px;
+    background: #f3f3f3;
+    position: relative;
+    height: 360px;
+    width: 582px;
+    padding-top: 15px;
 }
 
 .buttonMessage {
-    right: 0;
-    border: none;
-    padding: 1%;
     font: inherit;
     width: 100%;
-    margin-bottom: 2%;
+    background: #99b7bc;
+    border-width: 0 0 1px 0;
+    border-style: solid;
+    border-color: #f6f4f4;
+    color: white;
+    margin-top: 10px;
 }
 
 .buttonMessage:hover {
-    background: #79D493;
+    background: white;
+    color: #336064;
+    width: 200px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.buttonMessage:focus {
+    background: white;
+    color: #336064;
+    width: 200px;
+    border-radius: 10px;
+}
+
+.buttonsContainer:nth-child(1) {
+    margin: 6px 8px 0 8px;
+}
+
+.buttonsContainer {
+    margin: 1px 8px 0 8px;
+}
+
+.sendMessageBtn {
+    width: 85px;
+    height: 38px;
+    background-color: rgb(96, 165, 111);
+    color: white;
+    border: none;
+    font-size: 1rem;
+    direction: rtl;
+    float: right;
+    border-radius: 20px;
+    margin: 10px 22px 3px 2px;
+
+}
+
+.sendMessageBtn:hover {
+    background-color: #6bd489;
+    cursor: pointer;
 }
 
 
@@ -41,40 +84,51 @@
 }
 
 .sendMessageBtn {
-    width: 5%;
-    height: 113%;
+    width: 85px;
+    height: 38px;
     background-color: rgb(96, 165, 111);
     color: white;
     border: none;
     font-size: 1rem;
     direction: rtl;
     float: right;
+    border-radius: 20px;
+    margin: 10px 22px 3px 2px;
 }
 .sendMessageBtn:hover {
     background-color: #6bd489;
 }
 
+.sendMessageBtnContainer {
+    height: 60px;
+    background: #f3f3f3;
+}
+
 .chatInput {
     display: inline-block;
-    width: 94%;
-    height: 113%;
+    width: 420px;
+    height: 40px;
     font-size: 1rem;
-    background-color: #6B7A8F;
-    color: white;
+    background-color: white;
+    color: black;
     outline: none;
-    border: none;
     direction: rtl;
     float: right;
     padding: 0 6px;
+    border: solid 10px #f3f3f3;
+    border-radius: 30px;
 
 }
-.chatInput:hover {
-    background: rgb(148, 147, 147);
-
+.chatInput::placeholder {
+    color: #d7d7d7;
 }
 
 .displayingMessages {
     overflow: auto;
-    height: 569px;
+    height: 34vh;
     max-height: 569px;
+}
+
+.messageDetails {
+
 }

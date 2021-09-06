@@ -27,7 +27,7 @@ const UseDistance = (currentUser, currentCity, currentStreet, setLoading) => { /
                         range: 200
                     })
                 };
-                const url = "http://127.0.0.1:8000/app/products_for_user";
+                const url = "https://fierce-depths-60636.herokuapp.com/https://mysterious-cove-83556.herokuapp.com/app/products_for_user";
                 const response = await fetch(url, requestOptions).then(response => response.json()).then(response => handleResponse(response));
             }
 

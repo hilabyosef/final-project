@@ -19,8 +19,7 @@ const Inbox = () => {
 
     return (
         <div className="messagesContainer">
-            <button className="expandMessagesBtn" onClick={handleExpandUsersChat}>שיחות</button>
-            {expandUsersChat ? <Conversations /> : null}
+            <Conversations />
         </div>
     )
 }

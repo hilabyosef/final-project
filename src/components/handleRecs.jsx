@@ -22,7 +22,7 @@ const HandleRecs = (currentUser) => { //taking in a collection from which we wan
                         userId: user.currentUser
                     })
                 };
-                const url = "http://127.0.0.1:8000/app/register";
+                const url = "https://fierce-depths-60636.herokuapp.com/https://mysterious-cove-83556.herokuapp.com/app/register";
                 const response = await fetch(url, requestOptions).then(response => response.json())
                     .then(response => handleResponse(response));
             }

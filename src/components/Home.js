@@ -29,18 +29,18 @@ const Home = () => {
         <div>
             {products.map((product, key) => {
                 return (
-                        <div>
-                            <h1>{key}</h1>
-                            <p>{product.givingUser}</p>
-                            {console.log(`product id: ${product.id}`)}
-                            <Link to={{
-                                pathname: "/ContactSeller",
-                                state: {
-                                    givingUserId: product.givingUser,
-                                    productId: product.id
-                                }
-                            }}>contact seller</Link>
-                        </div>
+                    <div>
+                        <h1>{key}</h1>
+                        <p>{product.givingUser}</p>
+                        {console.log(`product id: ${product.id}`)}
+                        <Link to={{
+                            pathname: "/ContactSeller",
+                            state: {
+                                givingUserId: product.givingUser,
+                                productId: product.id
+                            }
+                        }}>contact seller</Link>
+                    </div>
                 )
             })}
         </div>

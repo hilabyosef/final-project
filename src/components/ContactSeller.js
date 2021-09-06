@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from 'react';
 import { fire, projectFirestore, timestamp } from "../firebase";
-import './Inbox.css'
 import "./ContactSeller.css"
 import Messages from "./Messages";
 
@@ -30,7 +29,7 @@ const ContactSeller = (props) => {
                     tempChatId = doc.id
                     setChatid(doc.id)
                 }
-                })
+            })
 
             if (!tempChatId) {
                 console.log("no chat id");
@@ -39,7 +38,7 @@ const ContactSeller = (props) => {
                     userId2: givingUserId
                 }).then((docRef) => setChatid(docRef.id)).catch(error => alert(error.message));
             }
-            })
+        })
 
         return () => {
             subscriber();
@@ -66,7 +65,7 @@ const ContactSeller = (props) => {
     return (
         <div className="contact-seller-div">
             <div className="full-chat">
-                <div className="messaging-container">
+                <div className="messaging-div">
                     {chatid && <Messages chatid={chatid} />}
                 </div>
                 <form className="chat-form" onSubmit={sendMessage}>

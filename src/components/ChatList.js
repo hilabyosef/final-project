@@ -19,9 +19,9 @@ const ChatList = ({userid}) => {
 
     return (
         loading ? <p>loadingg</p> :
-        <div className="messageDetails">
-            <h4>{userNickname}</h4>
-        </div>
+            <div className="messageDetails">
+                <h4>{userNickname}</h4>
+            </div>
     )
 }
 

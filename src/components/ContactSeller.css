@@ -1,28 +1,51 @@
-/*.contact-seller-div {*/
-/*    position: absolute;*/
-/*    height: 400px;*/
-/*    width: 800px;*/
-/*    background: white;*/
-/*    border-radius: 10px;*/
-/*    top: 50%;*/
-/*    left: 50%;*/
-/*    transform: translate(-50%, -50%);*/
-/*    padding: 10px 10px 30px 10px;*/
-/*}*/
-
-/*.contact-seller-messages {*/
-/*    height: 636px;*/
-/*    max-height: 636px;*/
-/*    overflow: auto;*/
-/*}*/
-
 .contact-seller-div {
     position: absolute;
     height: 400px;
+    width: 570px;
     background: white;
     border-radius: 10px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 10px 10px 30px 10px;
+}
+
+.messaging-div {
+    background: #f3f3f3;
+    padding-top: 15px;
+    height: 350px;
+    overflow: auto;
+}
+
+.chat-form {
+    height: 60px;
+    background: #f3f3f3;
+}
+
+.send-message-btn {
+    width: 85px;
+    height: 38px;
+    background-color: rgb(96, 165, 111);
+    color: white;
+    border: none;
+    font-size: 1rem;
+    direction: rtl;
+    float: right;
+    border-radius: 20px;
+    margin: 10px 22px 3px 2px;
+}
+
+.chat-input {
+    display: inline-block;
+    width: 420px;
+    height: 40px;
+    font-size: 1rem;
+    background-color: white;
+    color: black;
+    outline: none;
+    direction: rtl;
+    float: right;
+    padding: 0 6px;
+    border: solid 10px #f3f3f3;
+    border-radius: 30px;
 }

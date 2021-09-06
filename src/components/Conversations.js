@@ -25,16 +25,16 @@ const Conversations = () => {
         const tempUsers = [];
         let messagesRef = projectFirestore.collection('ChatsID');
         const subscriber = messagesRef.onSnapshot((querySnapshot) => {
-                querySnapshot.forEach((doc) =>  {
-                    console.log(currentUserid)
-                    if (doc.data().userId1 === currentUserid) {
-                        tempUsers.push(doc.data().userId2)
-                    }
-                    if (doc.data().userId2 === currentUserid) {
-                        tempUsers.push(doc.data().userId1)
-                    }
-                });
-                setUsersId(tempUsers);
+            querySnapshot.forEach((doc) =>  {
+                console.log(currentUserid)
+                if (doc.data().userId1 === currentUserid) {
+                    tempUsers.push(doc.data().userId2)
+                }
+                if (doc.data().userId2 === currentUserid) {
+                    tempUsers.push(doc.data().userId1)
+                }
+            });
+            setUsersId(tempUsers);
         })
 
         return () => {
@@ -66,8 +66,6 @@ const Conversations = () => {
         chatsIDRef.onSnapshot((querySnapshot) => {
             querySnapshot.forEach((doc) => {
                 if ((doc.data().userId1 === currentUserid && doc.data().userId2 === userid) || (doc.data().userId1 === userid && doc.data().userId2 === currentUserid)) {
-                    console.log("setting chat id")
-                    console.log(doc.id)
                     setChatid(doc.id);
                 }
             });
@@ -83,16 +81,18 @@ const Conversations = () => {
                 <div className="sendingMessages">
                     {expandChat ?
                         <form className="chatForm" onSubmit={sendMessage}>
-                            <input className="chatInput" value={formValue} onChange={(e) => setFormValue(e.target.value)} placeholder="say something nice" />
-                            <button className="sendMessageBtn" type="submit" disabled={!formValue}>שליחת הודעה</button>
+                            <input className="chatInput" value={formValue} onChange={(e) => setFormValue(e.target.value)} placeholder="הקלד הודעתך כאן" />
+                            <div className="sendMessageBtnContainer">
+                                <button className="sendMessageBtn" type="submit" disabled={!formValue}>שליחת הודעה</button>
+                            </div>
                         </form> : ''}
                 </div>
             </div>
             <div className="messagesList">
                 {usersId && usersId.map(userid =>
-                    <div>
+                    <div className="buttonsContainer">
                         <button className="buttonMessage" onClick={() => {handleExpandChat(userid)}} value={userid}>
-                                <ChatList userid={userid}/>
+                            <ChatList userid={userid}/>
                         </button>
                     </div>
                 )}
